@@ -1,0 +1,25 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+#logo {
+    width: 220px;
+    height: 100px;
+}
+
+.main {
+    padding-top: 150px;
+    margin-bottom: 100px;
+}
+
+#footer {
+    background: linear-gradient(90deg, #14213d, #1d3557 25%, #264653);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+#footer a {
+    color: white;
+}

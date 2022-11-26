@@ -8,7 +8,7 @@ import flask_sqlalchemy
 import flask_cors
 
 # DB connection URI
-db_engine = os.environ.get('DB_ENGINE')
+db_engine = os.environ.get('DB_ENGINE').replace("://", "ql://", 1)
 username = os.environ.get('USERNAME')
 password = os.environ.get('PASSWORD')
 server = os.environ.get('SERVER')

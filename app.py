@@ -8,14 +8,10 @@ import flask_sqlalchemy
 import flask_cors
 
 # DB connection URI
-db_engine = os.environ.get('DB_ENGINE')
-username = os.environ.get('USERNAME')
-password = os.environ.get('PASSWORD')
-server = os.environ.get('SERVER')
-port = os.environ.get('PORT')
-database = os.environ.get('DATABASE')
+db_connection = os.environ.get('DATABASE_URL')
 
-db_connection = f'{db_engine}://{username}:{password}@{server}:{port}/{database}'
+if db_connection.startswith("postgres://"):
+    db_connection = db_connection.replace("postgres://", "postgresql://", 1)
 
 # application initialization
 application = flask.Flask(__name__)

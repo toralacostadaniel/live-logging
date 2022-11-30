@@ -11,7 +11,7 @@ def serialize_sensor_data(data):
             'temperature_status': record.temperature_status,
             'humidity': record.humidity,
             'humidity_status': record.humidity_status,
-            'created_at': datetime.strftime(record.created_at, '%Y-%m-%d %H:%M'),
+            'created_at': datetime.strftime(record.created_at, '%d-%m-%Y %H:%M'),
         })
 
     return sensor_data
